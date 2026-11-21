@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "BNI Positive LT System",
-  description: "Internal Leadership Team Operations System for BNI Positive Chapter",
+  description: "Internal Leadership Team Operations System",
 };
 
 export default function RootLayout({
@@ -17,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex h-screen bg-gray-100">
+      <body className="bg-gray-100">
+        <div className="flex h-screen">
           <Sidebar />
           <main className="flex-1 overflow-y-auto p-6">{children}</main>
         </div>
